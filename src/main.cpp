@@ -25,10 +25,14 @@ int main(void)
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
 
-        /* Swap front and back buffers */
+        glBegin(GL_TRIANGLES);
+        glVertex2f(-0.5, -0.5);
+        glVertex2f(0.0, 0.5);
+        glVertex2f(0.5, -0.5);
+        glEnd();
+
         glfwSwapBuffers(window);
 
-        /* Poll for and process events */
         glfwPollEvents();
     }
 
